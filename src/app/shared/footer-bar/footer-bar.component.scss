@@ -1,0 +1,35 @@
+#footer-bar {
+    background-color: rgb(4, 57, 79, .9);
+
+    .footer-bar__wrapper {
+        padding-right: 4vw;
+        padding-left: 4vw;
+
+        .__content {
+            color: white;
+            font-family: 'Maven Pro', 'Doppio One';
+            font-size: 12px;
+            padding-top: 4vmin;
+            padding-bottom: 2vmin;
+
+
+            img.logo {
+                height: 150px;
+            }
+
+            @media(max-width:575px) {
+                img.logo {
+                    height: 120px;
+                }
+            }
+        }
+
+        .__copyright {
+            color: white;
+            font-size: 12px;
+            padding: 2px;
+            text-align: center;
+            width: 100%;
+        }
+    }
+}

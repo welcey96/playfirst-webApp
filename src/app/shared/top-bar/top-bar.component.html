@@ -1,0 +1,26 @@
+<nav class="top-bar__nav" #topbar>
+  <div class="contents__left">
+    <a routerLink="['/']" class="logo">
+      <img src="assets/logo/logo8.png" alt="PlayFirst Therapy Center logo">
+    </a>
+  </div>
+  <div class="contents__right">
+    <div class="p-1">
+      <div><a href="tel:+63 976 057 0452"><i class="fas fa-phone mr-2"></i>+63 976 057 0452</a></div>
+      <div><a href="mailto:playfirst.therapy@gmail.com"><i
+            class="fas fa-envelope mr-2"></i>playfirst.therapy@gmail.com</a></div>
+    </div>
+    <div class="p-1">
+      <div><a href="https://www.facebook.com/playfirst.therapy"><i
+            class="fab fa-facebook-f mr-2"></i>@playfirst.therapy</a></div>
+      <div><a href="https://www.instagram.com/playfirst_therapy_center/?hl=en"><i
+            class="fab fa-instagram mr-2"></i>@playfirst_therapy_center</a></div>
+    </div>
+
+    <div class="toggle">
+      <a #sideToggle (click)="toggleSideNav()">
+        <i class="fas fa-bars"></i>
+      </a>
+    </div>
+  </div>
+</nav>

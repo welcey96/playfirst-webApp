@@ -1,0 +1,66 @@
+@import "variables";
+
+.top-bar__nav {
+  align-items: center;
+  // background-color: rgba(253, 211, 57, .7);
+  background: rgba(255, 255, 255, .8);
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  position: fixed;
+  padding: 0 2vw;
+  top: 0;
+  transition: all .5s ease-in-out;
+  width: 100%;
+  z-index: 1000;
+
+  &>div {
+    font-family: 'Maven Pro', 'Doppio One';
+    font-size: 12px;
+    font-weight: bold;
+    height: inherit;
+  }
+
+  &.__scrolled {
+    height: 80px;
+  }
+
+  .contents__left {
+
+    a.logo {
+      height: inherit;
+
+      img {
+        height: inherit;
+      }
+    }
+  }
+
+  .contents__right {
+    display: flex;
+    align-items: center;
+
+    .toggle {
+      display: none;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media(max-width:$sm-max-width) {
+    height: 80px;
+
+    .contents__right {
+      &>div:not(.toggle) {
+        display: none;
+      }
+
+      .toggle {
+        display: block;
+      }
+    }
+  }
+
+  @media(max-width:$xs-max-width) {
+    height: 50px;
+  }
+}

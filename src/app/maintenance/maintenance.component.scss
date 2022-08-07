@@ -1,0 +1,65 @@
+#maintenance {
+    // background-color: rgba(253, 211, 57, .7);
+    height: 80vh;
+
+    .maintenance__content {
+        padding-top: 160px;
+        padding-bottom: 3.3vmax;
+        padding-right: 4vw;
+        padding-left: 4vw;
+
+        .caption {
+            font-size: 80px;
+            letter-spacing: 1px;
+            text-align: center;
+            font-family: 'Mitr';
+            font-weight: bold;
+
+            @media(max-width:919px) {
+                font-size: 45px;
+
+            }
+
+            @media(max-width:575px) {
+                font-size: 30px;
+
+            }
+
+            @media(max-width:319px) {
+                font-size: 15px;
+
+            }
+        }
+    }
+
+    .bg {
+        animation: slide 3s ease-in-out infinite alternate;
+        background-image: linear-gradient(-60deg, #FDD343 50%, #09f 50%);
+        bottom: 0;
+        left: -50%;
+        opacity: .5;
+        position: fixed;
+        right: -50%;
+        top: 0;
+        z-index: -1;
+
+        &.bg2 {
+            animation-direction: alternate-reverse;
+            animation-duration: 4s;
+        }
+
+        &.bg3 {
+            animation-duration: 5s;
+        }
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(-25%);
+        }
+
+        100% {
+            transform: translateX(25%);
+        }
+    }
+}

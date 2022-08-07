@@ -1,0 +1,79 @@
+<div id="dashboard-main">
+
+  <div id="section1">
+    <div class="carousel">
+      <carousel [pauseOnFocus]="true">
+        <ng-container *ngFor="let x of carouselItems; trackBy:trackByIndex">
+          <slide>
+            <div class="slide-item" [style.background-image]="'url(' + x.src + ')'">
+              <div class="caption">
+                <h2 class="title">{{x.title}}</h2>
+                <div class="lead">
+                  <p>{{x.lead}}</p>
+                </div>
+              </div>
+            </div>
+          </slide>
+        </ng-container>
+      </carousel>
+    </div>
+  </div>
+
+  <div id="section2">
+    <div class="container">
+      <h2>Our Mission </h2>
+      <span class="small-border"></span>
+      <p>At PlayFirst Therapy Center for Kids and Adults, we are devoted to providing the highest most professional
+        quality of care for our patients. Our facility offers a stress-free environment to the families while their
+        loved ones receive the finest therapy treatment.
+      </p>
+      <p>
+        If your loved one’s present delays in development or has endured physical, cognitive or communication
+        difficulties, early intervention produces the best results as it allows therapists to work through their most
+        crucial stages of gross and fine motor, oral and language development.
+      </p>
+    </div>
+  </div>
+
+  <div id="section3">
+    <div class="container">
+      <h2>Quality Therapy for Your Child</h2>
+      <div class="lead font-weight-normal">Playfirst Therapy Center offers comprehensive therapy services.</div>
+    </div>
+
+    <div class="wrapper">
+      <carousel [itemsPerSlide]="s3ItemsPerSlide" [singleSlideOffset]="true" [startFromIndex]="0" [interval]="3000" [showIndicators]="false">
+        <ng-container *ngFor="let x of serviceItems; trackBy:trackByIndex; ">
+          <slide>
+            <div class="content" [style.background-image]="'url(' + x.src + ')'">
+              <h3 class="content-text">{{x.title}}</h3>
+              <div class="overlay"></div>
+            </div>
+          </slide>
+        </ng-container>
+      </carousel>
+    </div>
+  </div>
+
+  <div id="section4">
+    <div class="row no-gutters">
+      <div class="col-md-4 col-sm-12 s3-1">
+        <div class="p-5">
+          <h2>Our Branches</h2>
+          <div class="lead font-weight-normal">Playfirst Therapy Center has two branches across Cebu.</div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62793.887149193004!2d123.90653879971141!3d10.372401454621343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a9a3bca228d935%3A0xb7fca4d2e9b506d4!2sPlayFirst%20Therapy%20Center%20for%20Kids%20and%20Adult!5e0!3m2!1sen!2sph!4v1659801864802!5m2!1sen!2sph"
+          width="100%" height="400" style="border:0;" allowfullscreen="true" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9567762545284!2d123.83380399622845!3d10.265066475638752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99d009441b963%3A0x1d4e431fa7f8a8ed!2sSYCA%20Bldg!5e0!3m2!1sen!2sph!4v1659802704360!5m2!1sen!2sph"
+          width="100%" height="400" style="border:0;" allowfullscreen="true" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>

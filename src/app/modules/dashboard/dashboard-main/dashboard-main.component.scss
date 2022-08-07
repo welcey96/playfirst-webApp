@@ -1,0 +1,241 @@
+@import "_variables";
+
+#dashboard-main {
+    margin-top: 100px;
+    position: relative;
+
+    @media(max-width:$sm-max-width) {
+        margin-top: 80px;
+    }
+
+    @media(max-width:$xs-max-width) {
+        margin-top: 50px;
+    }
+
+    >* {
+        position: relative;
+    }
+
+    #section1 {
+
+        //background-color: rgba(253, 211, 57, .7);
+        // background-color: white;
+        //padding: 0 4vw  23px ;
+
+        .carousel {
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                display: none;
+            }
+
+            .carousel-indicators li {
+                padding: 2px;
+                height: 1px;
+                width: 1px;
+                border: 0px;
+                border-radius: 5px;
+            }
+
+            .slide-item {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 600px;
+                position: relative;
+
+                .caption {
+                    position: absolute;
+                    bottom: 0;
+                    width: 50%;
+                    padding: 25px 50px;
+                    color: white;
+                    letter-spacing: 1px;
+
+                    .title {
+                        font-size: 2.5em;
+                        font-weight: bold;
+                        color: #ffffff;
+                        animation: carouselSlideIn ease-in;
+                        animation-duration: .3s;
+                        transform: translateY(-200px);
+                    }
+
+                    .lead {
+                        animation: carouselSlideIn ease-in;
+                        animation-duration: .4s;
+                        transform: translateY(-190px);
+                    }
+
+                    @keyframes carouselSlideIn {
+                        0% {
+                            transform: translateY(0);
+                        }
+                    }
+
+                }
+            }
+
+            @media(max-width:$md-max-width) {
+
+                .slide-item {
+                    .caption {
+                        width: 90%;
+                    }
+                }
+            }
+
+            @media(max-width:$sm-max-width) {
+                .slide-item {
+                    .caption {
+                        .title {
+                            font-size: 30px;
+
+                        }
+                    }
+                }
+            }
+
+
+            @media(max-width:$xs-max-width) {
+                .slide-item {
+                    height: 500px;
+
+                    .caption {
+                        padding: 50px 20px 0px;
+
+                        .title {
+                            transform: translateY(-110px);
+                        }
+
+                        .lead {
+                            transform: translateY(-100px);
+
+                        }
+                    }
+                }
+
+            }
+
+            @media(max-width:$xxs-max-width) {
+                .slide-item {
+                    .caption {
+
+                        .title,
+                        .lead {
+                            font-size: unset;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #section2 {
+        padding: 10vh 0;
+        background-color: #EAEAEE;
+        font-family: $font4;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+
+        .small-border {
+            width: 100px;
+            border-top: 4px solid rgb(4, 57, 79, .9);
+            display: block;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    #section3 {
+
+        padding: 10vh 0 0;
+        background-color: #ffffff;
+        font-family: $font4;
+        letter-spacing: 1px;
+
+        .carousel-control-next,
+        .carousel-control-prev {
+            height: 50px;
+            margin: auto 0;
+            background-color: rgba(4, 57, 79, 0.9);
+            opacity: 1;
+            color: white;
+            width: 40px;
+            z-index: 11;
+        }
+
+        .wrapper {
+            padding: 5vh 0;
+
+            .content {
+                height: 250px;
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+
+                .content-text {
+                    color: white;
+                    z-index: 10;
+                    transition: .3s ease-in;
+                    transform: translateY(0);
+                    position: relative;
+                }
+
+                .overlay {
+                    position: absolute;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    background: rgb(0, 0, 0);
+                    background: rgba(0, 0, 0, 0.5);
+                    color: #f1f1f1;
+                    width: 100%;
+                    opacity: 0;
+                    color: white;
+                    font-size: 20px;
+                    padding: 20px;
+                    text-align: center;
+                    transition: opacity .3s ease-in-out;
+                }
+
+                &:hover {
+                    .content-text {
+                        font-size: 30px;
+                        transform: translateY(-10px);
+                    }
+
+                    .overlay {
+                        opacity: .6;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    #section4 {
+        background-color: #EAEAEE;
+        font-family: $font4;
+        letter-spacing: 1px;
+        font-size: 1.1rem;
+
+        .s3-1 {
+            background-color: rgba(253, 211, 57, .7);
+
+            div {
+                margin: auto 0;
+            }
+        }
+
+    }
+}
