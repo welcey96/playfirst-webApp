@@ -34,18 +34,7 @@ export class DashboardMainComponent implements OnInit {
         src: '/assets/images/7600.png',
         title: "WE ARE ACTIVELY HIRING!",
         lead: "We are in need of Occupational Therapists, Speech Therapists and SPED Teachers for our growing clinics in Consolacion and Talisay, if interested, you may send your resume to playfirst.therapy@gmail.com or message us on our Facebook account."
-      },
-      // {
-      //   src: '/assets/images/1600.png',
-      //   title: "COBY = ARJO",
-      //   lead: "Cutie."
-      // },
-     
-      // {
-      //   src: '/assets/images/9600.png',
-      //   title: "Lorem ipsum dolor ug loyloy anak izi",
-      //   lead: "Namatay sa heat stroke."
-      // }
+      }
     ];
 
     this.serviceItems = [
