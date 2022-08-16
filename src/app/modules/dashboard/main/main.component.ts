@@ -3,11 +3,11 @@ import { VIEWPORT_BREAKPOINTS } from '@common/constants';
 
 @Component({
   selector: 'app-dashboard-main',
-  templateUrl: './dashboard-main.component.html',
-  styleUrls: ['./dashboard-main.component.scss'],
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class DashboardMainComponent implements OnInit {
+export class MainComponent implements OnInit {
 
   @ViewChild('s3Carousel') s3Carousel: ElementRef;
   carouselItems: SlideItems[];

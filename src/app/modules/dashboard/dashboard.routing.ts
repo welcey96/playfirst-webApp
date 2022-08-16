@@ -1,9 +1,9 @@
 import { Routes, RouterModule } from '@angular/router';
-import { DashboardMainComponent } from './dashboard-main/dashboard-main.component';
+import { MainComponent } from './main/main.component';
 
 
 const routes: Routes = [
-  { path: "", component: DashboardMainComponent },
+  { path: "", component: MainComponent },
 ];
 
 export const DashboardRoutingRoutes = RouterModule.forChild(routes);
