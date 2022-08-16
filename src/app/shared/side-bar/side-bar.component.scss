@@ -10,14 +10,71 @@
     right: 0;
     transform: translateX(100%);
     transition: .3s ease-in-out;
+    font-family: $font5;
 
     &.showSideBar {
         transform: translateX(0);
     }
 
-    a.close {
-        // font-size: 15px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+        width: inherit;
+
+        li {
+            width: inherit;
+            padding: 7px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+
+            a {
+                width: 100%;
+            }
+        }
     }
+
+    .ul-routes {
+        >li {
+            border: .3px solid grey;
+            border-radius: 10px;
+            font-weight: 600;
+            margin: 5px 15px;
+
+            a {
+
+                &:hover,
+                .active {
+                    color: white;
+                }
+            }
+        }
+
+
+        li.services-route {
+            justify-content: space-between;
+        }
+
+        .ul-services {
+            li {
+                font-size: 13px;
+                margin: auto 15px;
+
+                a {
+
+                    &:hover,
+                    .active {
+                        color: red;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
 
     @media(max-width:$xs-max-width) {
         width: 100%;
