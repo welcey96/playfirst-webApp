@@ -1,4 +1,4 @@
-import { Action, ActionReducer, createReducer, on } from "@ngrx/store";
+import { createReducer, on } from "@ngrx/store";
 import { toggleSideBar } from "./sidebar.actions";
 
 export const initialState = false;

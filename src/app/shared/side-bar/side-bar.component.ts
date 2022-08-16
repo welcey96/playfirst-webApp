@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { toggleSideBar } from 'src/app/state/sidebar.actions';
+import { GenericType, Services } from 'src/data/services';
 
 @Component({
   selector: 'app-side-bar',
@@ -10,15 +11,18 @@ import { toggleSideBar } from 'src/app/state/sidebar.actions';
 })
 export class SideBarComponent implements OnInit {
   sideBarToggle$: Observable<boolean>;
-
+  services: GenericType[];
+  isCollapsedServicesBtn: boolean = false;
+  
   constructor(private store: Store<{ sideBarToggle: boolean }>) {
     this.sideBarToggle$ = store.select('sideBarToggle');
   }
 
   ngOnInit() {
+    this.services = Services;
   }
 
-  closeSideNav(){
+  closeSideNav() {
     this.store.dispatch(toggleSideBar());
   }
 

@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingRoutes } from './app.routing';
 import { StoreModule } from '@ngrx/store';
 import { sideBarReducer } from './state/sidebar.reducer';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [		
@@ -17,11 +18,11 @@ import { sideBarReducer } from './state/sidebar.reducer';
    ],
   imports: [
     AppRoutingRoutes,
+    BrowserAnimationsModule,
     BrowserModule,
     SharedModule,
     RouterModule,
     StoreModule.forRoot({ sideBarToggle: sideBarReducer })
-    
   ],
   providers: [],
   bootstrap: [AppComponent]
