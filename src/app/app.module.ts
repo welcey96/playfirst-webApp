@@ -6,6 +6,8 @@ import { ShellComponent } from './shell/shell.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 import { RouterModule } from '@angular/router';
 import { AppRoutingRoutes } from './app.routing';
+import { StoreModule } from '@ngrx/store';
+import { sideBarReducer } from './state/sidebar.reducer';
 
 @NgModule({
   declarations: [		
@@ -18,6 +20,8 @@ import { AppRoutingRoutes } from './app.routing';
     BrowserModule,
     SharedModule,
     RouterModule,
+    StoreModule.forRoot({ sideBarToggle: sideBarReducer })
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

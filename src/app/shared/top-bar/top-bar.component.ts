@@ -1,4 +1,6 @@
 import { Component, OnInit, HostListener, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { toggleSideBar } from 'src/app/state/sidebar.actions';
 
 @Component({
   selector: 'app-top-bar',
@@ -8,9 +10,8 @@ import { Component, OnInit, HostListener, ViewChild, ElementRef, Renderer2 } fro
 export class TopBarComponent implements OnInit {
 
   @ViewChild('topbar', { static: true }) el!: ElementRef;
-  @ViewChild('sideToggle', { static: true }) toggle!: ElementRef;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2, private store: Store<{ sideBarToggle: boolean }>) { }
 
   ngOnInit() { }
 
@@ -22,12 +23,8 @@ export class TopBarComponent implements OnInit {
       this.renderer.removeClass(this.el.nativeElement, '__scrolled')
   }
 
-
-  toggleSideNav(){
-    console.log('hre');
-    
+  toggleSideNav() {
+    this.store.dispatch(toggleSideBar())
   }
-
-
 }
 

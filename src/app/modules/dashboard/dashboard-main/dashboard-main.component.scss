@@ -1,26 +1,7 @@
 @import "_variables";
 
 #dashboard-main {
-    margin-top: 100px;
-    position: relative;
-
-    @media(max-width:$sm-max-width) {
-        margin-top: 80px;
-    }
-
-    @media(max-width:$xs-max-width) {
-        margin-top: 50px;
-    }
-
-    >* {
-        position: relative;
-    }
-
     #section1 {
-
-        //background-color: rgba(253, 211, 57, .7);
-        // background-color: white;
-        //padding: 0 4vw  23px ;
 
         .carousel {
 
@@ -45,31 +26,32 @@
                 position: relative;
 
                 .caption {
-                    position: absolute;
+                    position: relative;
                     bottom: 0;
                     width: 50%;
                     padding: 25px 50px;
                     color: white;
                     letter-spacing: 1px;
+                    height: 100%;
 
                     .title {
                         font-size: 2.5em;
                         font-weight: bold;
                         color: #ffffff;
-                        animation: carouselSlideIn ease-in;
+                        animation: carouselSlideIn ease-in-out;
                         animation-duration: .3s;
-                        transform: translateY(-200px);
+                        transform: translateY(100px);
                     }
 
                     .lead {
                         animation: carouselSlideIn ease-in;
                         animation-duration: .4s;
-                        transform: translateY(-190px);
+                        transform: translateY(120px);
                     }
 
                     @keyframes carouselSlideIn {
                         0% {
-                            transform: translateY(0);
+                            transform: translateY(300px);
                         }
                     }
 
@@ -90,7 +72,6 @@
                     .caption {
                         .title {
                             font-size: 30px;
-
                         }
                     }
                 }
@@ -102,29 +83,47 @@
                     height: 500px;
 
                     .caption {
-                        padding: 50px 20px 0px;
+                        padding: 40px 20px 0px;
 
                         .title {
-                            transform: translateY(-110px);
+
+                            transform: translateY(90px);
                         }
 
                         .lead {
-                            transform: translateY(-100px);
-
+                            font-size: 15px;
+                            transform: translateY(100px);
                         }
                     }
                 }
 
             }
 
+            @media(max-width:375px) {
+                .slide-item {
+                    .caption {
+                        .title {
+                            transform: translateY(20px);
+                        }
+
+                        .lead {
+                            transform: translateY(30px);
+                        }
+                    }
+                }
+            }
+
             @media(max-width:$xxs-max-width) {
                 .slide-item {
                     .caption {
+                        padding: 20px 20px 0px;
 
-                        .title,
+                        .title {
+                            font-size: 18px;
+                        }
+
                         .lead {
                             font-size: unset;
-
                         }
                     }
                 }

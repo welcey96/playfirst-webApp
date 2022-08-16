@@ -4,6 +4,7 @@ import { FooterBarComponent } from './footer-bar/footer-bar.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MaintenanceGuardService } from './guards/maintenance.guard.service';
 import { AuthGuardService } from './guards/auth-guard.service';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 
 @NgModule({
@@ -12,11 +13,13 @@ import { AuthGuardService } from './guards/auth-guard.service';
   ],
   declarations: [
     TopBarComponent,
-    FooterBarComponent
+    FooterBarComponent,
+    SideBarComponent
   ],
   exports: [
     TopBarComponent,
-    FooterBarComponent
+    FooterBarComponent,
+    SideBarComponent
   ],
   providers:[
     AuthGuardService,

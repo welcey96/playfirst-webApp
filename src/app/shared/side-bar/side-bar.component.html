@@ -1,0 +1,7 @@
+<nav class="side-bar__nav" [ngClass]="{'showSideBar': sideBarToggle$ | async}">
+    <div class="d-flex p-3">
+        <a (click)="closeSideNav()" class="close">
+            <i class="fas fa-solid fa-xmark"></i>
+        </a>
+    </div>
+</nav>
