@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardRoutingRoutes } from './dashboard.routing';
-import { DashboardMainComponent } from './dashboard-main/dashboard-main.component';
+import { MainComponent } from './main/main.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SharedModule } from 'src/app/shared/shared.module';
 
@@ -12,6 +12,6 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CarouselModule,
     SharedModule
   ],
-  declarations: [DashboardMainComponent]
+  declarations: [MainComponent]
 })
 export class DashboardModule { }
