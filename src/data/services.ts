@@ -26,6 +26,34 @@ export const Services: GenericType[] =
         },
     ]
 
+export const Position: GenericType[] =
+    [
+        {
+            id: 1,
+            name: 'Occupational Therapist'
+        },
+        {
+            id: 2,
+            name: 'Physical Therapist'
+        },
+        {
+            id: 3,
+            name: 'Speech Therapist'
+        },
+        {
+            id: 4,
+            name: 'PlayGroup'
+        },
+        {
+            id: 5,
+            name: 'SPED'
+        },
+        {
+            id: 6,
+            name: 'Tele-Therapy'
+        },
+    ]
+
 
 export interface GenericType {
     id: number;
