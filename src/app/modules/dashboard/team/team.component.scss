@@ -1,0 +1,41 @@
+@import "_variables";
+
+.our-team {
+    header {
+
+        background: url(/assets/images/1600.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .header-title {
+            color: #FFFFFF;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: $font5;
+            line-height: 1;
+            font-size: 50px;
+        }
+
+        @media(max-width:$xxs-max-width) {
+            height: 300px;
+
+            .header-title {
+                font-size: 30px;
+            }
+        }
+    }
+
+    section.content {
+        p {
+            font-family: $font4;
+            letter-spacing: 1px;
+            font-size: 1.1rem;
+        }
+    }
+
+}

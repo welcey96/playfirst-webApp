@@ -3,15 +3,21 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingRoutes } from './dashboard.routing';
 import { MainComponent } from './main/main.component';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
-import { SharedModule } from 'src/app/shared/shared.module';
+import { SharedModule } from '../../shared/shared.module';
+import { TeamComponent } from './team/team.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
-    DashboardRoutingRoutes,
     CarouselModule,
-    SharedModule
+    SharedModule,
+    DashboardRoutingRoutes,
   ],
-  declarations: [MainComponent]
+  declarations: 
+  [
+    MainComponent,
+    TeamComponent,
+  ]
 })
 export class DashboardModule { }

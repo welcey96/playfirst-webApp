@@ -6,9 +6,12 @@
     </div>
     <div>
         <ul class="ul-routes">
-            <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
+            <li>
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">HOME</a>
             </li>
-            <li><a>OUR TEAM</a></li>
+            <li>
+                <a routerLink="/team" routerLinkActive="active">OUR TEAM </a>
+            </li>
             <li class="services-route">
                 <a (click)="isCollapsedServicesBtn = !isCollapsedServicesBtn">OUR SERVICES</a>
                 <i class="fas fa-solid fa-chevron-down"></i>

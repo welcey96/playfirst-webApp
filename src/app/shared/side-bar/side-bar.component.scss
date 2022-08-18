@@ -34,6 +34,8 @@
         }
     }
 
+
+
     .ul-routes {
         >li {
             border: .3px solid grey;
@@ -44,36 +46,33 @@
             a {
 
                 &:hover,
-                .active {
+                &.active {
                     color: white;
                 }
             }
         }
 
-
         li.services-route {
             justify-content: space-between;
         }
 
-        .ul-services {
-            li {
-                font-size: 13px;
-                margin: auto 15px;
+    }
 
-                a {
+    .ul-services {
+        li {
+            font-size: 13px;
+            margin: auto 15px;
 
-                    &:hover,
-                    .active {
-                        color: red;
-                        font-weight: bold;
-                    }
+            a {
+
+                &:hover,
+                &.active {
+                    color: red;
+                    font-weight: bold;
                 }
             }
         }
-
     }
-
-
 
 
     @media(max-width:$xs-max-width) {
